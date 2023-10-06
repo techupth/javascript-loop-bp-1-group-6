@@ -83,6 +83,17 @@ let orders = [
   },
 ];
 
-let birdiePurchasedAmount;
+//let birdiePurchasedAmount;
 
 // Start coding here
+let birdiePurchasedAmount = 0; // ตัวแปรสำหรับเก็บจำนวนเงินที่ Birdie จ่าย
+
+for (let i = 0; i < orders.length; i++) {
+  let order = orders[i];
+  if (order.customerName === "Birdie Shepland") {
+    birdiePurchasedAmount += order.productPrice * order.productQuantity;
+  }
+}
+
+console.log("Total price is " + birdiePurchasedAmount);
+

@@ -89,3 +89,17 @@ let maxPurchasedAmount;
 let maxPurchasedId;
 
 // Start coding here
+let maxTotalPrice = 0; // ตัวแปรสำหรับเก็บราคารวมสูงสุด
+let orderIdWithMaxTotalPrice; // ตัวแปรสำหรับเก็บ id ของรายการที่มียอดซื้อสินค้ารวมมากที่สุด
+
+for (let i = 0; i < orders.length; i++) {
+  let order = orders[i];
+  let total = order.productPrice * order.productQuantity;
+
+  if (total > maxTotalPrice) {
+    maxTotalPrice = total;
+    orderIdWithMaxTotalPrice = order.id;
+  }
+}
+
+console.log("Order id: " + orderIdWithMaxTotalPrice + ", Total price: " + maxTotalPrice);

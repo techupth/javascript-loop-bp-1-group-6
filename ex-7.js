@@ -85,3 +85,12 @@ let orders = [
 
 const jcbOrders = [];
 // Start coding here
+for (let i = 0; i < orders.length; i++) {
+  let order = orders[i];
+  if (order.creditCardType === "jcb") {
+    // หากประเภทบัตรเครดิตตรงกับ "jcb" ให้เพิ่มรายการนี้เข้าใน jcbOrders
+    jcbOrders.push(order);
+  }
+}
+
+console.log(jcbOrders);
