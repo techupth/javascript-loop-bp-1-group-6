@@ -84,7 +84,7 @@ let orders = [
 ];
 
 
-let currentPurchasedAmount;
+let currentPurchasedAmount = [];
 let maxPurchasedAmount;
 let maxPurchasedId;
 

@@ -86,6 +86,7 @@ let orders = [
 //let birdiePurchasedAmount;
 
 // Start coding here
+<<<<<<< HEAD
 let birdiePurchasedAmount = 0; // ตัวแปรสำหรับเก็บจำนวนเงินที่ Birdie จ่าย
 
 for (let i = 0; i < orders.length; i++) {
@@ -97,3 +98,20 @@ for (let i = 0; i < orders.length; i++) {
 
 console.log("Total price is " + birdiePurchasedAmount);
 
+=======
+for (let i=0 ; i < orders.length ; i++){
+  let totalPriceAmount = orders[i].productPrice*orders[i].productQuantity;
+  if (orders[i].customerName === "Birdie Shepland"){
+    console.log("Id: " + orders[i].id + "\n" +
+              "Customer Name: " + orders[i].customerName + "\n" +
+              "Product: " + orders[i].productName + "\n" +
+              "Product Price: " + orders[i].productPrice + "\n" +
+              "Product Quantity: "+ orders[i].productQuantity + "\n" +
+              "Total: " + totalPriceAmount + "\n");
+
+    birdiePurchasedAmount = (totalPriceAmount);
+    console.log("Total price is " + birdiePurchasedAmount);
+    break;
+  };
+};
+>>>>>>> earth
