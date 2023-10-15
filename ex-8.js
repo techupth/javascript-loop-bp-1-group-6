@@ -85,3 +85,20 @@ let orders = [
 
 let sumPurchasedAmount = 0;
 // Start coding here
+let totalPriceAmount = 0;
+for (let i = 0 ; i < orders.length ; i++){
+  //console.log("Id: " + orders[i].id + "\n" +
+              //"Customer Name: " + orders[i].customerName + "\n" +
+              //"Product: " + orders[i].productName + "\n" +
+              //"Product Price: " + orders[i].productPrice + "\n" +
+              //"Product Quantity: "+ orders[i].productQuantity + "\n" +
+              //"Total: " + totalPriceAmount);
+  totalPriceAmount = (orders[i].productPrice*orders[i].productQuantity);
+  //console.log("Sum before : " + sumPurchasedAmount);
+  if (i < orders.length){
+    sumPurchasedAmount = sumPurchasedAmount+totalPriceAmount;
+  };
+//console.log("Total Price : " + totalPriceAmount);
+//console.log("Sum After: "+ sumPurchasedAmount + "\n");
+};
+console.log("Total: " + sumPurchasedAmount);//Total: 62255151

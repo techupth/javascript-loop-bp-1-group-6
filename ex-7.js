@@ -85,3 +85,14 @@ let orders = [
 
 const jcbOrders = [];
 // Start coding here
+for (let i=0 ; i < orders.length ; i++){
+  let totalPriceAmount = orders[i].productPrice*orders[i].productQuantity;
+  if (orders[i].creditCardType === "jcb"){
+    console.log("Id: " + orders[i].id + "\n" +
+              "Customer Name: " + orders[i].customerName + "\n" +
+              "Product: " + orders[i].productName + "\n" +
+              "Product Price: " + orders[i].productPrice + "\n" +
+              "Product Quantity: "+ orders[i].productQuantity + "\n" +
+              "Total: " + totalPriceAmount + "\n");
+  };
+};

@@ -84,8 +84,21 @@ let orders = [
 ];
 
 
-let currentPurchasedAmount;
+let currentPurchasedAmount = [];
 let maxPurchasedAmount;
 let maxPurchasedId;
 
 // Start coding here
+for (let i = 0 ; i < orders.length ; i++){
+  let totalPriceAmount = orders[i].productPrice*orders[i].productQuantity;
+  currentPurchasedAmount.push(totalPriceAmount);
+    //console.log("Round: "+ i +" Id: "+orders[i].id);
+    //console.log("Id: " + orders[i].id + "\n" +
+               //"Customer Name: " + orders[i].customerName + "\n" +
+               //"Product: " + orders[i].productName + "\n" +
+               //"Product Price: " + orders[i].productPrice + "\n" +
+               //"Product Quantity: "+ orders[i].productQuantity + "\n" +
+              //"Total: " + totalPriceAmount + "\n");
+
+};
+console.log(currentPurchasedAmount);

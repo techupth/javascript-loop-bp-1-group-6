@@ -2,19 +2,19 @@
 
 //Start coding here
 function calculateTax(income) {
-    const taxPercentage;
-    const taxAmount;
+    let taxPercentage ;
+    let taxAmount;
   
     if (income > 50000) {
       taxPercentage = 0.3;
       taxAmount = income * taxPercentage;
-      return taxAmoun
-    }
-    
-    taxPercentage = 0.2;
-    taxAmount = income * taxPercentage;
-    taxAmount
-  }
+      return taxAmount;
+    } else (income <= 50000); {
+        taxPercentage = 0.1;
+        taxAmount = income * taxPercentage;
+        return taxAmount
+     };
+};
   
   const result1 = calculateTax(60000);
   console.log("Tax to be paid: $" + result1);
